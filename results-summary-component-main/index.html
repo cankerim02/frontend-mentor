@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+  rel="stylesheet"
+/>
+  <style>
+     body {
+      font-family: 'Hanken Grotesk', sans-serif;
+      background-color: white;
+      color: hsl(241, 100%, 89%);
+     }
+
+     main {
+      display: flex;
+      justify-content: center;
+     }
+
+     .results-summary {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      background-color: hsl(0%, 0%, 100%);
+      border-radius: 25px;
+     }
+     .result {
+      flex: 0 0 auto;
+      width: 360px;
+      background-image: linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+      );
+      border-radius: 25px;
+     }
+
+     .summary {
+      flex: 0 0 auto;
+      width: 360px;
+      border-radius: 25px;
+     }
+
+     .header1 {
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 20px;
+     }
+     .result-circle {
+      margin: auto;
+      width: max-content;
+     }
+
+     .result-multi-line-circle {
+      background-image: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+      );
+      border-radius: 50%;
+      height: 170px;
+      width: 170px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+     }
+
+     .score {
+      font-weight: 800;
+      color:  hsl(0, 0%, 100%);
+      font-size: 50px;
+     }
+     .result-circle p {
+      margin: 0;
+      padding: 0;
+     }
+     .header2 {
+      text-align: center;
+      color:  hsl(0, 0%, 100%);
+      font-weight: 700;
+      font-size: 25px;
+      padding: 20px;
+     }
+     .result-comment {
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+     }
+     .header3 {
+      color: hsl(224, 30%, 27%);
+      font-weight: 800;
+      font-size: 25px;
+     }
+     .summary-item {
+      padding: 0 10px;
+      margin: 20px auto;
+      width: 300px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+     }
+     .summary-item p {
+      font-weight: 600;
+     }
+     .summary-item img {
+      margin: 0px 5px;
+      font-weight: 600;
+     }
+     .summary-item button {
+      width: 100%;
+      height: 50px;
+      background-color: hsl(224, 30%, 27%);
+      color: hsl(0, 0%, 100%);
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 20px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border: none;
+     }
+
+     .summary-item img {
+      position: relative;
+      top: 4px;
+      margin-right: 8px;
+     }
+
+     @media (max-width: 720px) {
+      body {
+        margin: 0;
+      }
+      .result,
+      .summary {
+        flex: 1 1 auto;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+     }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="results-summary">
+      <div class="result">
+        <div class="header1">Your Result</div>
+        <div class="result-circle">
+          <div class="result-multi-line-circle">
+            <p class="score">76</p>
+            <p>of 100</p>
+          </div>
+        </div>
+        <div class="header2">Great</div>
+        <p class="result-comment">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="summary">
+        <div class="summary-item header3">
+          Summary
+        </div>
+
+        <div class="summary-item" style="background: hsl(0, 100%, 67%, 0.1)">
+          <p style="color:hsl(0, 100%, 67%); float: left"><img src="./assets/images/icon-reaction.svg"> Reaction</p>
+          <p style="color:hsl(0, 100%, 67%); float: right">80 / 100</p>
+          <div style="clear: both"></div>
+        </div>
+
+        <div class="summary-item" style="background: hsl(39, 100%, 56%, 0.1)">
+          <p style="color:hsl(39, 100%, 56%); float: left"><img src="./assets/images/icon-memory.svg"> Memory</p>
+          <p style="color:hsl(39, 100%, 56%); float: right">92 / 100</p>
+          <div style="clear: both"></div>
+        </div>
+
+        <div class="summary-item" style="background: hsl(166, 100%, 37%, 0.1)">
+          <p style="color:hsl(166, 100%, 37%); float: left; "><img src="./assets/images/icon-verbal.svg">Verbal</p>
+          <p style="color:hsl(166, 100%, 37%); float: right">61 / 100</p>
+          <div style="clear: both"></div>
+        </div>
+
+        <div class="summary-item" style="background: hsl(234, 85%, 45%, 0.1)">
+          <p style="color:hsl(234, 85%, 45%); float: left"><img src="./assets/images/icon-visual.svg">Visual</p>
+          <p style="color:hsl(234, 85%, 45%); float: right">72 / 100</p>
+          <div style="clear: both"></div>
+        </div>
+        <div class="summary-item">
+          <button>Continue</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+</body>
+</html>
